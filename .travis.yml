@@ -10,7 +10,7 @@ deploy:
     provider: elasticbeanstalk
     region: us-east-1
     app: abcd_death_timer
-    env: AbcdDeathTimer-env
+    env: AbcdDeathTimer-env-1
     bucket_name: elasticbeanstalk-us-east-1-549267202148
     bucket_path: abcd_death_timer
     on:
