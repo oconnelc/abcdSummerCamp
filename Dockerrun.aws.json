@@ -4,7 +4,7 @@
         {
             "name": "abcd_death_timer",
             "image": "lordoku/abcd_death_timer",
-            "hostname": "abcd_death_timer",
+            "hostname": "abcd-death-timer",
             "essential": true,
             "memory": 128,
             "sourceVolume": "awseb-logs-client",
