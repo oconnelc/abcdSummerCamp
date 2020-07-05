@@ -5,16 +5,16 @@ script:
     - docker build -t $DOCKER_ID/abcd_death_timer ./death_timer
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
     - docker push $DOCKER_ID/abcd_death_timer
-# deploy:
-#     edge: true
-#     provider: elasticbeanstalk
-#     region: us-east-1
-#     app: multi-docker
-#     env: MultiDocker-env
-#     bucket_name: elasticbeanstalk-us-east-1-549267202148
-#     bucket_path: docker-multi
-#     on:
-#         branch: master
+deploy:
+    edge: true
+    provider: elasticbeanstalk
+    region: us-east-1
+    app: abcd_death_timer
+    env: AbcdDeathTimer-env
+    bucket_name: elasticbeanstalk-us-east-1-549267202148
+    bucket_path: abcd_death_timer
+    on:
+        branch: master
     
-#     access_key_id: $AWS_ACCESS_KEY
-#     secret_access_key: $AWS_SECRET_KEY
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET_KEY
