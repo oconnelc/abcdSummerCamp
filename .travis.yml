@@ -1,15 +1,11 @@
-language: node_js
 sudo: required
 services:
     - docker
-    
-deploy_to_dockerhub:
+script:
     - docker build -t lordoku/abcd_death_timer ./death_timer
-    # Log into Docker CLI
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    # Take those images and push them to docker hub
     - docker push lordoku/abcd_death_timer
-# deploy_to_aws:
+# deploy:
 #     edge: true
 #     provider: elasticbeanstalk
 #     region: us-east-1
