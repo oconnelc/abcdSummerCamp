@@ -5,7 +5,7 @@
             "name": "abcd_death_image",
             "image": "lordoku/abcd_death_image",
             "hostname": "abcd_death_image",
-            "essential": false,
+            "essential": true,
             "memory": 128,
             "sourceVolume": "awseb-logs-client",
             "containerPath": "/var/log/nginx"
