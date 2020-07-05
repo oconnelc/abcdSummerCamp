@@ -1,6 +1,12 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+var webpack = require('webpack')
 
 module.exports = {
+    devtool: 'source-map',
+    devServer: {
+        host: '0.0.0.0',
+        port: 3000
+    },
     module: {
         rules: [
             {
@@ -23,6 +29,10 @@ module.exports = {
                 use: ['style-loader', 'css-loader'],
             }
         ]
+    },
+    node: {process: false},
+    resolve: {
+        extensions: ['.js', '.jsx']
     },
     plugins: [
         new HtmlWebPackPlugin({
