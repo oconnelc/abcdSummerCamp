@@ -2,16 +2,41 @@
   text-align: left;
   background: black;
   color: white;
-  font-size: calc(10px + 10vmin);
+  font-size: calc(10px + 5vmin);
   height: 100vh;
   position: relative;
 }
 
 .TimerText {
-  position: absolute;
-  top: 50%; 
-  left: 50%;
-  transform: translate(-50%,-50%);
+  position: relative;
+  left: 50vw;
+  top: 50vh;
   width: 50vw;
   height: 200px;
+}
+
+.blinking{
+  animation:blinkingText 1.2s infinite;
+  position: relative;
+  width: 50vw;
+  height: 200px;
+  left: 50vw;
+  top: 50vh;
+}
+
+.dead {
+  position: relative;
+  width: 50vw;
+  height: 200px;
+  top: 50vh;
+  color: red;
+  font-size: calc(10px + 10vmin);
+}
+
+@keyframes blinkingText{
+  0%{     color: red;    }
+  49%{    color:red; }
+  60%{    color: white; }
+  99%{    color:white;  }
+  100%{   color: #000;    }
 }

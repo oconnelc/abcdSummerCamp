@@ -27,12 +27,21 @@ function App() {
     return () => clearInterval(interval);
   }, [isActive, seconds]);
 
-  var text = seconds == 0 ? "YOU ARE DEAD" : seconds +" seconds remaining";
+  var text = seconds == 0 ? "YOU ARE DEAD" : seconds;
+  var className = 'TimerText';
+
+  if(seconds == 0) {
+    className = 'dead';
+
+  } else if(seconds < 5) {
+    className = 'blinking'
+  }
+
   return (
     
 
     <div className="App">
-      <div className="TimerText">
+      <div className={className}>
         {text}
       </div>
     </div>
