@@ -1,0 +1,13 @@
+version: '3'
+services:
+    death_timer:
+        stdin_open: true
+        build:
+            dockerfile: Dockerfile.dev
+            context: ./death_timer
+        volumes: 
+            - /app/node_modules
+            - /app/src/style
+            - ./death_timer:/app
+        ports:
+            - "3000:3000"
