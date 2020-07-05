@@ -27,11 +27,13 @@ function App() {
     return () => clearInterval(interval);
   }, [isActive, seconds]);
 
-
+  var text = seconds == 0 ? "YOU ARE DEAD" : seconds +" seconds remaining";
   return (
+    
+
     <div className="App">
       <div className="TimerText">
-        {seconds}
+        {text}
       </div>
     </div>
   );
