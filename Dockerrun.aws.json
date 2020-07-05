@@ -8,7 +8,13 @@
             "essential": true,
             "memory": 128,
             "sourceVolume": "awseb-logs-client",
-            "containerPath": "/var/log/nginx"
+            "containerPath": "/var/log/nginx",
+            "portMappings" :[
+                {
+                    "hostPort" : 3000, 
+                    "containerPort" :3000
+                }
+            ],
         }
     ]
 }
