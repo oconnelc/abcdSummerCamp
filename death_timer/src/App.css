@@ -2,7 +2,7 @@
   text-align: left;
   background: black;
   color: white;
-  font-size: calc(10px + 5vmin);
+  font-size: calc(10px + 10vmin);
   height: 100vh;
   position: relative;
 }
@@ -10,7 +10,6 @@
 .TimerText {
   position: relative;
   left: 50vw;
-  top: 50vh;
   width: 50vw;
   height: 200px;
 }
@@ -21,16 +20,14 @@
   width: 50vw;
   height: 200px;
   left: 50vw;
-  top: 50vh;
 }
 
 .dead {
   position: relative;
   width: 50vw;
   height: 200px;
-  top: 50vh;
   color: red;
-  font-size: calc(10px + 10vmin);
+  font-size: calc(10px + 15vmin);
 }
 
 @keyframes blinkingText{
