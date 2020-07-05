@@ -2,9 +2,9 @@ sudo: required
 services:
     - docker
 script:
-    - docker build -t lordoku/abcd_death_timer ./death_timer
+    - docker build -t $DOCKER_ID/abcd_death_timer ./death_timer
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker push lordoku/abcd_death_timer
+    - docker push $DOCKER_ID/abcd_death_timer
 # deploy:
 #     edge: true
 #     provider: elasticbeanstalk
