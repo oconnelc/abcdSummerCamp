@@ -2,9 +2,9 @@
     "AWSEBDockerrunVersion": 2,
     "containerDefinitions": [
         {
-            "name": "abcd_death_image",
-            "image": "lordoku/abcd_death_image",
-            "hostname": "abcd-death-image",
+            "name": "abcd_death_timer",
+            "image": "lordoku/abcd_death_timer",
+            "hostname": "abcd_death_timer",
             "essential": true,
             "memory": 128,
             "sourceVolume": "awseb-logs-client",
